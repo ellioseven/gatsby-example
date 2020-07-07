@@ -1,10 +1,11 @@
 ---
 title: Cypress & Github Actions
 date: "2015-05-28T22:40:32.169Z"
-description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
+description: "So, what is it like to be color blind and also work in the web design and development industry? I’ll answer that question throughout this article, but it’s something that’s always factored into my thoughts, given my passion for design and now my career. I wonder if having 'normal' vision would have made me a better artist growing up."
+author: "Elliot Mitchum"
 ---
 
-As to my job and my color vision no, **colorblindness** doesn’t affect my work as much as you’d think. During design meetings, I can quickly point out areas where we need to reconsider our color palette. While reviewing layouts, I’m able to explain why we need to evaluate how—and if—we’re only conveying information with color. I like that I can bring a singular perspective to the table and a voice for others like me; I am able to offer insights that others don’t necessarily have.
+As to my job and my color vision no, **colorblindness** doesn’t [affect my work](https://google.com) as much as you’d think. During design meetings, I can quickly point out areas where we need to reconsider our color palette. While reviewing layouts, I’m able to explain why we need to evaluate how—and if—we’re only conveying information with color. I like that I can bring a singular perspective to the table and a voice for others like me; I am able to offer insights that others don’t necessarily have.
 
 ## We Found It Was Time
 
@@ -17,9 +18,9 @@ As to my job and my color vision no, **colorblindness** doesn’t affect my work
   - this is very interesting
 - Goodness much until that fluid owl
 
-When she reached the first hills of the **Italic Mountains**, she had a last view back on the skyline of her hometown _Bookmarksgrove_, 
+When she reached the first hills of the **Italic Mountains**, she had a last view back on the skyline of her hometown _Bookmarksgrove_,
 
-#### On deer horse aboard tritely yikes and much 
+#### On deer horse aboard tritely yikes and much
 
 Lane. Pityful a rhetoric question ran over her cheek, then she continued her way. On her way she met a copy.
 
@@ -48,7 +49,7 @@ When she reached the first hills of the Italic Mountains, she had a last view ba
 
 > The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country.
 
-But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their projects again and again. 
+But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their projects again and again.
 
 ```javascript
 const MenuAuthenticated = () => {

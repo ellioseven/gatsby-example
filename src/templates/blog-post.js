@@ -1,70 +1,37 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import styled from "styled-components"
-import { rem, math } from "polished"
+import Layout from "@components/Layout"
+import SEO from "@components/SEO"
+import { Post } from "@components/Post"
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+const Style = styled.article`
+  
+  .post__content > p {
+    text-indent: 2rem;
+  }
+  
+`
 
-const BlogPostTemplate = ({ data, pageContext, location }) => {
+const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
-  const { previous, next } = pageContext
+  const { title, description, date, author } = post.frontmatter
 
   return (
-    <Layout location={location} title={siteTitle}>
-      <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
-      />
-      <div>
-        <header>
-          <h1>
-            {post.frontmatter.title}
-          </h1>
-          <div>
-            Written <strong>{post.frontmatter.date}</strong> by <strong>Elliot Mitchum</strong>
-          </div>
-        </header>
-        <p>So, what is it like to be color blind and also work in the web design and development industry? I’ll answer that question throughout this article, but it’s something that’s always factored into my thoughts, given my passion for design and now my career. I wonder if having “normal” vision would have made me a better artist growing up. </p>
+    <Layout location={ location } title={ siteTitle }>
+      <SEO title={ title } description={ description } />
+      <Style className="post">
+        <Post
+          title={ title }
+          date={ date }
+          author={ author }
+          description={ description } />
         <hr />
-        <main dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-          }}
-        />
-        <footer>
-          <Bio />
-        </footer>
-      </div>
-
-      <nav>
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </nav>
+        <div
+          className="post__content layout-indent"
+          dangerouslySetInnerHTML={{ __html: post.html }} />
+      </Style>
     </Layout>
   )
 }
@@ -84,6 +51,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        author
         date(formatString: "MMMM DD, YYYY")
         description
       }

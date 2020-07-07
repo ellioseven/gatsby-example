@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components"
-import { em, normalize } from "polished"
+import { em, rem, normalize } from "polished"
 
 export const Global = createGlobalStyle`
   ${normalize()}
@@ -7,6 +7,7 @@ export const Global = createGlobalStyle`
   * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
   }
 
   html,
@@ -90,10 +91,21 @@ export const Global = createGlobalStyle`
     + * {
       margin-top: 0;
     }
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    a:hover,
+    a:focus {
+      color: ${({ theme }) => theme.color.redPunk};
+      text-decoration: none;
+    }
   }
   
   a {
-    color: ${({ theme }) => theme.color.blueVolt};
+    color: ${({ theme }) => theme.color.redPunk};
     
     &:hover,
     &:focus {
@@ -101,26 +113,26 @@ export const Global = createGlobalStyle`
     }
   }
   
-  h1 {
+  h1, .h1 {
     ${({ theme }) => theme.typeSets.heading["4"]}
     @media (min-width: ${em(768, 16)}) {
       ${({ theme }) => theme.typeSets.heading["5"]}
     }
   }
   
-  h2 {
+  h2, .h2 {
     ${({ theme }) => theme.typeSets.heading["2"]}
   }
   
-  h3 {
+  h3, .h3 {
     ${({ theme }) => theme.typeSets.heading["1"]}
   }
   
-  h4 {
+  h4, .h4 {
     ${({ theme }) => theme.typeSets.heading["0"]}
   }
   
-  h4, h5, h6  {
+  h4, .h4, h5, .h5, h6, .h6  {
     ${({ theme }) => theme.typeSets.heading["-1"]}
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -183,5 +195,11 @@ export const Global = createGlobalStyle`
   
   ol > li {
     list-style: lower-roman;
+  }
+  
+  .layout-indent {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: ${rem(700, 18)};
   }
 `

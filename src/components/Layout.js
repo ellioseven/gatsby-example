@@ -10,7 +10,7 @@ import styled from "styled-components"
 const Style = styled.div`
   margin-left: auto;
   margin-right: auto;
-  max-width: ${rem(900, 18)};;
+  max-width: ${rem(840, 18)};
   
   .region--header {
     align-items: center;
@@ -47,30 +47,54 @@ const Style = styled.div`
       display: block;
       background-image: url("/logo.svg");
       background-size: cover;
-      height: 27px;
+      height: 20px;
       margin: 0;
-      width: 119px;
+      width: 87px;
       ${hideText()}
+      @media (min-width: 768px) {
+        height: 27px;
+        width: 119px;
+      }
     }
     
     menu {
       margin: 0 0 0 auto;
     }
+  }
+  
+  .region menu {
     
-    menu a {
+    a {
+      color: inherit;
+      text-decoration: none;
       margin-left: ${rem(30, 18)};;
       
       &:first-child {
         margin-left: 0;
       }
     }
+    
+    a:hover,
+    a:focus {
+      color: ${({ theme }) => theme.color.redPunk};
+      text-decoration: underline;
+    }
+      
   }
   
+  .region--main,
+  .region--footer {
+    padding-left: ${rem(30, 18)};
+    padding-right: ${rem(30, 18)};
+  }
+  
+  .region--footer {
+    padding-bottom: ${rem(60, 18)};
+    text-align: right;
+  }
 `
 
-const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  let header
+const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={ theme }>
       <Global />
@@ -84,11 +108,13 @@ const Layout = ({ location, title, children }) => {
             <Link to="/articles">Articles</Link>
           </menu>
         </header>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        <main className="region region--main">{children}</main>
+        <hr />
+        <footer className="region region--footer">
+          <menu>
+            <Link to="/">About</Link>
+            <Link to="/articles">Articles</Link>
+          </menu>
         </footer>
       </Style>
       <Helmet>

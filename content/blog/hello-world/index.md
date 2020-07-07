@@ -1,7 +1,7 @@
 ---
 title: Hello World
 date: "2015-05-01T22:12:03.284Z"
-description: "Hello World"
+description: "So, what is it like to be color blind and also work in the web design and development industry? I’ll answer that question throughout this article, but it’s something that’s always factored into my thoughts, given my passion for design and now my career. I wonder if having 'normal' vision would have made me a better artist growing up."
 ---
 
 This is my first post on my new fake blog! How exciting!

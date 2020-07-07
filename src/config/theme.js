@@ -3,6 +3,10 @@ import { math } from "polished"
 export const theme = {
   baseLineHeight: "2.33rem",
   baseVerticalRhythm: "2.22rem",
+  breakpoints: {
+    medium: 768,
+    large: 1024
+  },
   typeSets: {
     heading: {
       "-1": `
@@ -14,7 +18,7 @@ export const theme = {
         line-height: 2.33rem;
       `,
       "1": `
-        font-size: 1.444rem;
+        font-size: 1.414rem;
         line-height: 2.444rem;
       `,
       "2": `
@@ -35,16 +39,21 @@ export const theme = {
       `
     },
     content: {
+      "-1": `
+        font-size: 0.7rem;
+        line-height: 1.778rem;
+      `,
       "1": `
-        font-size: 1.444rem;
-        line-height: 2.778rem;
+        font-size: 1.414rem;
+        line-height: 3rem;
       `
     }
   },
   color: {
     greyCloud: "#eeeeee",
     greySlate: "#141313",
-    blueVolt: "#0074D9"
+    blueVolt: "#0074D9",
+    redPunk: "#FF4136"
   }
 }
 
