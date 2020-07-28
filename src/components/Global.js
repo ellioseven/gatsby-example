@@ -58,8 +58,10 @@ export const Global = createGlobalStyle`
     background-color: ${({ theme }) => theme.color.greySlate};
     box-shadow: 100px 0 0 0 #141313, -100px 0 0 0 #141314;
     color: white;
-    padding-bottom: 56px;
-    padding-top: 56px;
+    font-size: 14px;
+    line-height: 24px;
+    padding-bottom: 40px;
+    padding-top: 40px;
     overflow-x: auto;
   }
   
