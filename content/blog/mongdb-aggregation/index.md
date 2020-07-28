@@ -396,6 +396,12 @@ the input document to `foreignKey` on the joined/from document.
 - `localField` and `foreignKey` values are matched on equality
 - `as` can be any name, but will overwrite existing
 
+## Useful Aggregation Operators
+
+- `$redact` - Restrict access to a collection or fields
+- `$out` - Put output into collection (overwrite)
+- `$merge` - Put output into a new or existing collection
+
 ## Further Reading
 
 - https://medium.com/@paulrohan/aggregation-in-mongodb-8195c8624337
